@@ -1,7 +1,10 @@
-import { Home } from './components/Home'
-import { Dashboard } from './components/Dashboard'
-import { ToastContainer } from 'react-toastify'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Home } from './pages/Home';
+import Dashboard from './pages/Dashboard';
+import { ToastContainer } from 'react-toastify';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Categories } from './components/Categories';
+import { Brands } from './components/Brands';
+import { Cities } from './components/Cities';
 
 function App() {
   return (
@@ -9,12 +12,16 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/dashboard" element={<Dashboard />}>
+            <Route path="categories" element={<Categories />} />
+            <Route path="brands" element={<Brands />} />
+            <Route path="cities" element={<Cities />} />
+          </Route>
         </Routes>
       </Router>
       <ToastContainer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

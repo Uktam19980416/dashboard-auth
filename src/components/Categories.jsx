@@ -2,7 +2,7 @@ import { useEffect, useState, useRef } from 'react';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-export const Dashboard = () => {
+export const Categories = () => {
   const base_URL = 'https://autoapi.dezinfeksiyatashkent.uz/api';
   const base_URL2 = 'https://autoapi.dezinfeksiyatashkent.uz/api/uploads/images/';
   const [datas, setDatas] = useState([]);
