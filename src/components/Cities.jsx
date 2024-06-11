@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from 'react';
 import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import './react-toastify/dist/ReactToastify.css';
 
 export const Cities = () => {
   const base_URL = 'https://autoapi.dezinfeksiyatashkent.uz/api';
